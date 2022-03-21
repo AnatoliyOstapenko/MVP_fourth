@@ -16,6 +16,7 @@
 		BC9D773A27E8D3FC008554EC /* CryptoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9D773927E8D3FC008554EC /* CryptoModel.swift */; };
 		BC9D773D27E8D569008554EC /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9D773C27E8D568008554EC /* Presenter.swift */; };
 		BC9D774227E8D63C008554EC /* ViewInputDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9D774127E8D63C008554EC /* ViewInputDelegate.swift */; };
+		BC9D774427E8DBAC008554EC /* ViewOutDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9D774327E8DBAC008554EC /* ViewOutDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		BC9D773927E8D3FC008554EC /* CryptoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoModel.swift; sourceTree = "<group>"; };
 		BC9D773C27E8D568008554EC /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
 		BC9D774127E8D63C008554EC /* ViewInputDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewInputDelegate.swift; sourceTree = "<group>"; };
+		BC9D774327E8DBAC008554EC /* ViewOutDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewOutDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,8 +95,9 @@
 		BC9D773F27E8D57F008554EC /* View */ = {
 			isa = PBXGroup;
 			children = (
-				BC9D772927E8CFEE008554EC /* ViewController.swift */,
 				BC9D774127E8D63C008554EC /* ViewInputDelegate.swift */,
+				BC9D774327E8DBAC008554EC /* ViewOutDelegate.swift */,
+				BC9D772927E8CFEE008554EC /* ViewController.swift */,
 				BC9D772B27E8CFEE008554EC /* Main.storyboard */,
 			);
 			path = View;
@@ -181,6 +184,7 @@
 			files = (
 				BC9D774227E8D63C008554EC /* ViewInputDelegate.swift in Sources */,
 				BC9D772A27E8CFEE008554EC /* ViewController.swift in Sources */,
+				BC9D774427E8DBAC008554EC /* ViewOutDelegate.swift in Sources */,
 				BC9D772627E8CFEE008554EC /* AppDelegate.swift in Sources */,
 				BC9D773A27E8D3FC008554EC /* CryptoModel.swift in Sources */,
 				BC9D772827E8CFEE008554EC /* SceneDelegate.swift in Sources */,

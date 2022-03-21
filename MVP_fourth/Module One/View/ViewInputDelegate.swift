@@ -9,6 +9,6 @@ import Foundation
 
 protocol ViewInputDelegate: AnyObject {
     func setupInitialState()
-    func setupData(with testData: [CryptoModel])
+    func setupData(array: [CryptoModel])
     func displayData(index: Int)
 }

@@ -28,6 +28,9 @@
                                     <fontDescription key="titleFontDescription" type="system" weight="thin" pointSize="30"/>
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pWh-5q-Q0e"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="8MG-Z0-EYV">
                                 <rect key="frame" x="20" y="348" width="374" height="200"/>
@@ -67,6 +70,12 @@
                             <constraint firstItem="8MG-Z0-EYV" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="oly-Nu-Gjt"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="button" destination="Yi5-b8-Qxp" id="1WP-Kh-ctV"/>
+                        <outlet property="nameLabel" destination="B7n-KO-cRA" id="JTS-7I-2gW"/>
+                        <outlet property="tickerLabel" destination="qew-2e-29J" id="CIj-tO-Yl6"/>
+                        <outlet property="valueLabel" destination="rPD-Ul-Qv3" id="Oaa-6x-b2L"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

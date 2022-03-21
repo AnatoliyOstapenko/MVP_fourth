@@ -14,4 +14,20 @@ class Presenter {
     func setViewInputDelegate(viewInputDelegate: ViewInputDelegate?) {
         self.viewInputDelegate = viewInputDelegate
     }
+    
+    func loadTestData() {
+        viewInputDelegate?.setupData(array: testData)
+    }
+}
+
+extension Presenter: ViewOutDelegate {
+    func getData() {
+        loadTestData()
+    }
+    
+    func saveData() {
+    
+    }
+    
+    
 }
