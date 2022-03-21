@@ -13,6 +13,9 @@
 		BC9D772D27E8CFEE008554EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC9D772B27E8CFEE008554EC /* Main.storyboard */; };
 		BC9D772F27E8CFF1008554EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC9D772E27E8CFF1008554EC /* Assets.xcassets */; };
 		BC9D773227E8CFF1008554EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC9D773027E8CFF1008554EC /* LaunchScreen.storyboard */; };
+		BC9D773A27E8D3FC008554EC /* CryptoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9D773927E8D3FC008554EC /* CryptoModel.swift */; };
+		BC9D773D27E8D569008554EC /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9D773C27E8D568008554EC /* Presenter.swift */; };
+		BC9D774227E8D63C008554EC /* ViewInputDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9D774127E8D63C008554EC /* ViewInputDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		BC9D772E27E8CFF1008554EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BC9D773127E8CFF1008554EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BC9D773327E8CFF1008554EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC9D773927E8D3FC008554EC /* CryptoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoModel.swift; sourceTree = "<group>"; };
+		BC9D773C27E8D568008554EC /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
+		BC9D774127E8D63C008554EC /* ViewInputDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewInputDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +64,48 @@
 			children = (
 				BC9D772527E8CFEE008554EC /* AppDelegate.swift */,
 				BC9D772727E8CFEE008554EC /* SceneDelegate.swift */,
-				BC9D772927E8CFEE008554EC /* ViewController.swift */,
-				BC9D772B27E8CFEE008554EC /* Main.storyboard */,
+				BC9D773B27E8D53B008554EC /* Module One */,
 				BC9D772E27E8CFF1008554EC /* Assets.xcassets */,
 				BC9D773027E8CFF1008554EC /* LaunchScreen.storyboard */,
 				BC9D773327E8CFF1008554EC /* Info.plist */,
 			);
 			path = MVP_fourth;
+			sourceTree = "<group>";
+		};
+		BC9D773B27E8D53B008554EC /* Module One */ = {
+			isa = PBXGroup;
+			children = (
+				BC9D773E27E8D573008554EC /* Presenter */,
+				BC9D773F27E8D57F008554EC /* View */,
+				BC9D774027E8D588008554EC /* Model */,
+			);
+			path = "Module One";
+			sourceTree = "<group>";
+		};
+		BC9D773E27E8D573008554EC /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				BC9D773C27E8D568008554EC /* Presenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		BC9D773F27E8D57F008554EC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BC9D772927E8CFEE008554EC /* ViewController.swift */,
+				BC9D774127E8D63C008554EC /* ViewInputDelegate.swift */,
+				BC9D772B27E8CFEE008554EC /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BC9D774027E8D588008554EC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BC9D773927E8D3FC008554EC /* CryptoModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +179,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC9D774227E8D63C008554EC /* ViewInputDelegate.swift in Sources */,
 				BC9D772A27E8CFEE008554EC /* ViewController.swift in Sources */,
 				BC9D772627E8CFEE008554EC /* AppDelegate.swift in Sources */,
+				BC9D773A27E8D3FC008554EC /* CryptoModel.swift in Sources */,
 				BC9D772827E8CFEE008554EC /* SceneDelegate.swift in Sources */,
+				BC9D773D27E8D569008554EC /* Presenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
