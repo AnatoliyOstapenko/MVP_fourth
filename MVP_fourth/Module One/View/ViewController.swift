@@ -7,48 +7,46 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+protocol DataDelegate {
+    func printText(text: String)
+
+
+}
+
+class ViewController: UIViewController, DataDelegate {
+
     
-    let presenter = Presenter()
-    var array: [CryptoModel] = []
-    weak var viewOutDelegate: ViewOutDelegate?
-    var counter = 0
-    
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var tickerLabel: UILabel!
-    @IBOutlet weak var valueLabel: UILabel!
-    @IBOutlet weak var button: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        perform(#selector(advance), with: nil, afterDelay: 3)
+ 
+    }
+    
+    @objc func advance() {
+        let vc = SecondViewController()
+        vc.dataDelegate = self
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true, completion: nil)
         
-        presenter.setViewInputDelegate(viewInputDelegate: self) // pass viewcontroller to presenter
-        viewOutDelegate = presenter
-        viewOutDelegate?.getData()
     }
-
-    @IBAction func buttonPressed(_ sender: UIButton) {
+    
+    func printText(text: String) {
+        print("I print some text: \(text)")
     }
+    
     
 }
-// MARK: - ViewInput Delegate
-extension ViewController: ViewInputDelegate {
-    func setupInitialState() {
-        displayData(index: counter)
-    }
+
+class SecondViewController: UIViewController {
     
-    func setupData(array: [CryptoModel]) {
-        self.array = array
+    var dataDelegate: DataDelegate?
+  
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = .systemCyan
+        dataDelegate?.printText(text: "Hello World!")
     }
-    
-    func displayData(index: Int) {
-        if array.count >= 0 && counter <= array.count - 1 && counter >= 0 {
-            nameLabel.text = array[index].name
-            tickerLabel.text = array[index].ticker
-            valueLabel.text = String(array[index].value)
-        } else { print("display data fails")}
-    }
-    
     
 }
 
