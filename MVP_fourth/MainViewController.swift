@@ -8,13 +8,32 @@
 import UIKit
 
 class MainViewController: UIViewController {
+    
+    let subView = UIView()
+    let greatLabel = UILabel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         view.backgroundColor = .cyan
 
-        // Do any additional setup after loading the view.
+        configureUI()
     }
+    
+    func configureUI() {
+        subViewCreate()
+        greatLabelCreate()
+    }
+    
+    func subViewCreate() {
+        view.addSubview(subView)
+        subView.subViewConstraints(view: view)
+    }
+
+    func greatLabelCreate() {
+        subView.addSubview(greatLabel)
+        greatLabel.greatLabelConfigure(label: greatLabel)
+        greatLabel.greatLabelConstraints(view: subView)
+    }
+    
     
 }
