@@ -14,6 +14,9 @@
 		BC9D775527EA1550008554EC /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9D775427EA1550008554EC /* MainViewController.swift */; };
 		BC9D775727EA24F0008554EC /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9D775627EA24F0008554EC /* UIView+Ext.swift */; };
 		BC9D775927EA2D96008554EC /* UILabel+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9D775827EA2D96008554EC /* UILabel+Ext.swift */; };
+		BC9D775C27EA3DE8008554EC /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9D775B27EA3DE8008554EC /* Game.swift */; };
+		BC9D775E27EA3E35008554EC /* GameViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9D775D27EA3E35008554EC /* GameViewData.swift */; };
+		BC9D776027EA4392008554EC /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9D775F27EA4392008554EC /* Presenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		BC9D775427EA1550008554EC /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		BC9D775627EA24F0008554EC /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
 		BC9D775827EA2D96008554EC /* UILabel+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Ext.swift"; sourceTree = "<group>"; };
+		BC9D775B27EA3DE8008554EC /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		BC9D775D27EA3E35008554EC /* GameViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewData.swift; sourceTree = "<group>"; };
+		BC9D775F27EA4392008554EC /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +67,9 @@
 				BC9D772527E8CFEE008554EC /* AppDelegate.swift */,
 				BC9D772727E8CFEE008554EC /* SceneDelegate.swift */,
 				BC9D775427EA1550008554EC /* MainViewController.swift */,
+				BC9D775F27EA4392008554EC /* Presenter.swift */,
+				BC9D775B27EA3DE8008554EC /* Game.swift */,
+				BC9D775D27EA3E35008554EC /* GameViewData.swift */,
 				BC9D775A27EA2E67008554EC /* UI Extensions */,
 				BC9D772E27E8CFF1008554EC /* Assets.xcassets */,
 				BC9D773027E8CFF1008554EC /* LaunchScreen.storyboard */,
@@ -149,6 +158,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC9D775727EA24F0008554EC /* UIView+Ext.swift in Sources */,
+				BC9D775E27EA3E35008554EC /* GameViewData.swift in Sources */,
+				BC9D776027EA4392008554EC /* Presenter.swift in Sources */,
+				BC9D775C27EA3DE8008554EC /* Game.swift in Sources */,
 				BC9D775527EA1550008554EC /* MainViewController.swift in Sources */,
 				BC9D772627E8CFEE008554EC /* AppDelegate.swift in Sources */,
 				BC9D772827E8CFEE008554EC /* SceneDelegate.swift in Sources */,
