@@ -13,15 +13,15 @@ protocol PresenterView: AnyObject {
 }
 
 class Presenter {
+
     weak var view: PresenterView?
-    
     init(with view: PresenterView) {
         self.view = view
     }
     
     let spaceInvaders = Game(name: "Space Invaders", year: "1978", author: "Tomohiro Nishikado")
-    
-    @objc func startGame() {
+        
+    func startGame() {
         let game = GameViewData(name: spaceInvaders.name)
         view?.updateGame(game)
     }

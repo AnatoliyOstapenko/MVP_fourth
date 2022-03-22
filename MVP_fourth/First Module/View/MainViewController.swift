@@ -14,7 +14,7 @@ class MainViewController: UIViewController {
     
     var button = UIButton()
     var gameLabel = UILabel()
-    
+   
     lazy var presenter = Presenter(with: self)
 
     override func viewDidLoad() {
@@ -31,9 +31,9 @@ class MainViewController: UIViewController {
     
     @objc func startGame(sender: Any?) {
         presenter.startGame()
+        greatLabel.isHidden = true
     }
-    
-    
+
     func configureUI() {
         subViewCreate()
         greatLabelCreate()
@@ -54,9 +54,13 @@ class MainViewController: UIViewController {
     func buttonCreate() {
         view.addSubview(button)
         button.setTitle("Start Game", for: .normal)
+        button.layer.cornerRadius = 13
+        button.backgroundColor = .systemRed
         button.translatesAutoresizingMaskIntoConstraints = false
         button.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         button.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        button.widthAnchor.constraint(equalToConstant: 150).isActive = true
+        button.heightAnchor.constraint(equalTo: button.widthAnchor, multiplier: 0.25).isActive = true
     }
     func gameLabelCreate() {
         view.addSubview(gameLabel)
@@ -69,6 +73,7 @@ class MainViewController: UIViewController {
     
 }
 extension MainViewController: PresenterView {
+    
     func updateGame(_ model: GameViewData) {
         gameLabel.text = model.name
         view.backgroundColor = .yellow
