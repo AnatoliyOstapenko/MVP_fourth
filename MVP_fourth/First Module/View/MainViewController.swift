@@ -36,9 +36,9 @@ class MainViewController: UIViewController {
 
     func configureUI() {
         subViewCreate()
-        greatLabelCreate()
-        buttonCreate()
-        gameLabelCreate()
+        greatLabelConfigure()
+        buttonConfigure()
+        gameLabelConfigure()
     }
     
     func subViewCreate() {
@@ -46,28 +46,17 @@ class MainViewController: UIViewController {
         subView.subViewConstraints(view: view)
     }
 
-    func greatLabelCreate() {
+    func greatLabelConfigure() {
         subView.addSubview(greatLabel)
-        greatLabel.greatLabelConfigure(label: greatLabel)
-        greatLabel.greatLabelConstraints(view: subView)
+        greatLabel.greatLabelConstraints(view: subView, label: greatLabel)
     }
-    func buttonCreate() {
+    func buttonConfigure() {
         view.addSubview(button)
-        button.setTitle("Start Game", for: .normal)
-        button.layer.cornerRadius = 13
-        button.backgroundColor = .systemRed
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        button.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-        button.widthAnchor.constraint(equalToConstant: 150).isActive = true
-        button.heightAnchor.constraint(equalTo: button.widthAnchor, multiplier: 0.25).isActive = true
+        button.buttonConstraints(view: view, button: button)
     }
-    func gameLabelCreate() {
+    func gameLabelConfigure() {
         view.addSubview(gameLabel)
-        gameLabel.text = "Paused"
-        gameLabel.translatesAutoresizingMaskIntoConstraints = false
-        gameLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        gameLabel.topAnchor.constraint(equalToSystemSpacingBelow: button.bottomAnchor, multiplier: 3).isActive = true
+        gameLabel.gameLabelConstraints(view: view, button: button, label: gameLabel)
     }
     
     

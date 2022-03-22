@@ -13,7 +13,6 @@ extension UIView {
     func subViewConstraints(view: UIView) {
         backgroundColor = .yellow
         layer.cornerRadius = 24
-        // constraints
         translatesAutoresizingMaskIntoConstraints = false
         topAnchor.constraint(equalTo: view.topAnchor, constant: 120).isActive = true
         leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
@@ -21,9 +20,31 @@ extension UIView {
         heightAnchor.constraint(equalToConstant: 70).isActive = true
     }
     
-    func greatLabelConstraints(view: UIView) { 
+    func greatLabelConstraints(view: UIView, label: UILabel) {
+        label.text = "Welcome to my MVP project"
+        label.textAlignment = .center
+        label.font = .systemFont(ofSize: 28, weight: .thin)
         translatesAutoresizingMaskIntoConstraints = false
         centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+    }
+    
+    func buttonConstraints(view: UIView, button: UIButton) {
+        button.setTitle("Start Game", for: .normal)
+        layer.cornerRadius = 12
+        backgroundColor = .systemRed
+        translatesAutoresizingMaskIntoConstraints = false
+        centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        widthAnchor.constraint(equalToConstant: 120).isActive = true
+        heightAnchor.constraint(equalToConstant: 40).isActive = true
+    }
+    func gameLabelConstraints(view: UIView, button: UIButton, label: UILabel) {
+        label.text = "Paused"
+        label.textAlignment = .center
+        label.font = .systemFont(ofSize: 28, weight: .thin)
+        translatesAutoresizingMaskIntoConstraints = false
+        centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        topAnchor.constraint(equalToSystemSpacingBelow: button.bottomAnchor, multiplier: 3).isActive = true
     }
 }
