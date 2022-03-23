@@ -13,7 +13,7 @@ protocol SecondPresenterView: AnyObject {
 }
 
 class SecondPresenter {
-    let userService: UserService
+    private let userService: UserService
     weak var view: SecondPresenterView?
     
     init(view: SecondPresenterView, userService: UserService) {
@@ -22,8 +22,16 @@ class SecondPresenter {
     }
     
     func getUsers() {
-        userService.getUsers { <#[User]#> in
-            <#code#>
+        userService.getUsers { [weak self] users in
+            if users.count == 0 {
+                self?.view?.setEmptyUsers()
+            } else {
+                let mappedUsers = users.map {
+                    return UserViewData(name: "\($0.firstName) \($0.lastName)", age: "\($0.age)")
+                }
+                self?.view?.setUsers(users: mappedUsers)
+            }
+            
         }
     }
 }

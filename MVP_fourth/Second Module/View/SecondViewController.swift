@@ -9,7 +9,7 @@ import UIKit
 
 class SecondViewController: UIViewController {
     
-    //lazy var presenter
+    lazy var presenter = SecondPresenter(view: self, userService: UserService())
     
     let mvpTableView = UITableView()
     var array: [UserViewData] = []
@@ -20,7 +20,7 @@ class SecondViewController: UIViewController {
         mvpTableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         mvpTableView.dataSource = self
         
-        // presenter.getUsers()
+        presenter.getUsers()
 
     }
     override func loadView() {
@@ -37,7 +37,8 @@ extension SecondViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        
+        cell.textLabel?.text = array[indexPath.row].name
+        cell.detailTextLabel?.text = array[indexPath.row].age
         return cell
     }
     

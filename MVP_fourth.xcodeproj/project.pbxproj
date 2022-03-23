@@ -74,11 +74,7 @@
 			children = (
 				BC9D772527E8CFEE008554EC /* AppDelegate.swift */,
 				BC9D772727E8CFEE008554EC /* SceneDelegate.swift */,
-				BC9D776527EA5B64008554EC /* User.swift */,
-				BC9D776727EA5BB3008554EC /* UserService.swift */,
-				BC9D776F27EB3B7F008554EC /* UserViewData.swift */,
-				BC9D776D27EB37AB008554EC /* SecondPresenter.swift */,
-				BC9D776B27EA6632008554EC /* SecondViewController.swift */,
+				BC9D777427EB786E008554EC /* Second Module */,
 				BC9D776427EA582B008554EC /* First Module */,
 				BC9D775A27EA2E67008554EC /* UI Extensions */,
 				BC9D772E27E8CFF1008554EC /* Assets.xcassets */,
@@ -129,6 +125,42 @@
 				BC9D776227EA5801008554EC /* Model */,
 			);
 			path = "First Module";
+			sourceTree = "<group>";
+		};
+		BC9D777127EB783A008554EC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BC9D776527EA5B64008554EC /* User.swift */,
+				BC9D776727EA5BB3008554EC /* UserService.swift */,
+				BC9D776F27EB3B7F008554EC /* UserViewData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BC9D777227EB7849008554EC /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				BC9D776D27EB37AB008554EC /* SecondPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		BC9D777327EB785A008554EC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BC9D776B27EA6632008554EC /* SecondViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BC9D777427EB786E008554EC /* Second Module */ = {
+			isa = PBXGroup;
+			children = (
+				BC9D777127EB783A008554EC /* Model */,
+				BC9D777227EB7849008554EC /* Presenter */,
+				BC9D777327EB785A008554EC /* View */,
+			);
+			path = "Second Module";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
