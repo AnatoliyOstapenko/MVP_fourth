@@ -64,10 +64,5 @@ extension SecondViewController: SecondPresenterView {
         }
         
     }
-    
-    func setEmptyUsers() {
-        view.backgroundColor = .red
-    }
-    
-    
+  
 }

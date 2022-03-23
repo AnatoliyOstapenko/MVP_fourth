@@ -15,10 +15,6 @@ class UserService {
             User(firstName: "Alan", lastName: "Bradley", age: 24),
             User(firstName: "Winston", lastName: "Smith", age: 42)
         ]
-        
-        let dispatchTime = DispatchTime.now() + Double(Int64(0.1 * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)
-        DispatchQueue.main.asyncAfter(deadline: dispatchTime) {
-            completion(users)
-        }
+        completion(users)
     }
 }

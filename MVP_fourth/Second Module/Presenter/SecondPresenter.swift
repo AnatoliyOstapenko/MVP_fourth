@@ -9,7 +9,6 @@ import Foundation
 
 protocol SecondPresenterView: AnyObject {
     func setUsers(users: [UserViewData] )
-    func setEmptyUsers()
 }
 
 class SecondPresenter {
@@ -23,15 +22,11 @@ class SecondPresenter {
     
     func getUsers() {
         userService.getUsers { [weak self] users in
-            if users.count == 0 {
-                self?.view?.setEmptyUsers()
-            } else {
-                let mappedUsers = users.map {
-                    return UserViewData(name: "\($0.firstName) \($0.lastName)", age: "\($0.age) years old")
-                }
-                self?.view?.setUsers(users: mappedUsers)
-            }
             
+            let mappedUsers = users.map {
+                return UserViewData(name: "\($0.firstName) \($0.lastName)", age: "\($0.age) years old")
+            }
+            self?.view?.setUsers(users: mappedUsers)
         }
     }
 }

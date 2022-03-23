@@ -74,9 +74,10 @@
 			children = (
 				BC9D772527E8CFEE008554EC /* AppDelegate.swift */,
 				BC9D772727E8CFEE008554EC /* SceneDelegate.swift */,
-				BC9D777427EB786E008554EC /* Second Module */,
 				BC9D776427EA582B008554EC /* First Module */,
+				BC9D777427EB786E008554EC /* Second Module */,
 				BC9D775A27EA2E67008554EC /* UI Extensions */,
+				BC9D777527EBA812008554EC /* Services */,
 				BC9D772E27E8CFF1008554EC /* Assets.xcassets */,
 				BC9D773027E8CFF1008554EC /* LaunchScreen.storyboard */,
 				BC9D773327E8CFF1008554EC /* Info.plist */,
@@ -131,7 +132,6 @@
 			isa = PBXGroup;
 			children = (
 				BC9D776527EA5B64008554EC /* User.swift */,
-				BC9D776727EA5BB3008554EC /* UserService.swift */,
 				BC9D776F27EB3B7F008554EC /* UserViewData.swift */,
 			);
 			path = Model;
@@ -161,6 +161,14 @@
 				BC9D777327EB785A008554EC /* View */,
 			);
 			path = "Second Module";
+			sourceTree = "<group>";
+		};
+		BC9D777527EBA812008554EC /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				BC9D776727EA5BB3008554EC /* UserService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
