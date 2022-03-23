@@ -7,8 +7,7 @@
 
 import Foundation
 
-struct Game {
-    
+struct Game {    
     let name: String
     let year: String
     let author: String

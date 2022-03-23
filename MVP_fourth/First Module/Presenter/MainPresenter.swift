@@ -8,14 +8,14 @@
 import Foundation
 //import UIKit
 
-protocol PresenterView: AnyObject {
+protocol MainPresenterView: AnyObject {
     func updateGame(_ model: GameViewData)
 }
 
-class Presenter {
+class MainPresenter {
 
-    weak var view: PresenterView?
-    init(with view: PresenterView) {
+    weak var view: MainPresenterView?
+    init(with view: MainPresenterView) {
         self.view = view
     }
     

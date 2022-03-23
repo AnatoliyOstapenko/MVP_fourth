@@ -15,7 +15,7 @@ class MainViewController: UIViewController {
     var button = UIButton()
     var gameLabel = UILabel()
    
-    lazy var presenter = Presenter(with: self)
+    lazy var presenter = MainPresenter(with: self)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,13 +35,13 @@ class MainViewController: UIViewController {
     }
 
     func configureUI() {
-        subViewCreate()
+        subViewConfigure()
         greatLabelConfigure()
         buttonConfigure()
         gameLabelConfigure()
     }
     
-    func subViewCreate() {
+    func subViewConfigure() {
         view.addSubview(subView)
         subView.subViewConstraints(view: view)
     }
@@ -61,7 +61,7 @@ class MainViewController: UIViewController {
     
     
 }
-extension MainViewController: PresenterView {
+extension MainViewController: MainPresenterView {
     
     func updateGame(_ model: GameViewData) {
         gameLabel.text = model.name
@@ -70,3 +70,4 @@ extension MainViewController: PresenterView {
     
     
 }
+

@@ -15,9 +15,12 @@
 		BC9D775727EA24F0008554EC /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9D775627EA24F0008554EC /* UIView+Ext.swift */; };
 		BC9D775C27EA3DE8008554EC /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9D775B27EA3DE8008554EC /* Game.swift */; };
 		BC9D775E27EA3E35008554EC /* GameViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9D775D27EA3E35008554EC /* GameViewData.swift */; };
-		BC9D776027EA4392008554EC /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9D775F27EA4392008554EC /* Presenter.swift */; };
+		BC9D776027EA4392008554EC /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9D775F27EA4392008554EC /* MainPresenter.swift */; };
 		BC9D776627EA5B64008554EC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9D776527EA5B64008554EC /* User.swift */; };
 		BC9D776827EA5BB3008554EC /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9D776727EA5BB3008554EC /* UserService.swift */; };
+		BC9D776C27EA6632008554EC /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9D776B27EA6632008554EC /* SecondViewController.swift */; };
+		BC9D776E27EB37AB008554EC /* SecondPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9D776D27EB37AB008554EC /* SecondPresenter.swift */; };
+		BC9D777027EB3B7F008554EC /* UserViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9D776F27EB3B7F008554EC /* UserViewData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,9 +34,12 @@
 		BC9D775627EA24F0008554EC /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
 		BC9D775B27EA3DE8008554EC /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		BC9D775D27EA3E35008554EC /* GameViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewData.swift; sourceTree = "<group>"; };
-		BC9D775F27EA4392008554EC /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
+		BC9D775F27EA4392008554EC /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 		BC9D776527EA5B64008554EC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		BC9D776727EA5BB3008554EC /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		BC9D776B27EA6632008554EC /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		BC9D776D27EB37AB008554EC /* SecondPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondPresenter.swift; sourceTree = "<group>"; };
+		BC9D776F27EB3B7F008554EC /* UserViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +76,9 @@
 				BC9D772727E8CFEE008554EC /* SceneDelegate.swift */,
 				BC9D776527EA5B64008554EC /* User.swift */,
 				BC9D776727EA5BB3008554EC /* UserService.swift */,
+				BC9D776F27EB3B7F008554EC /* UserViewData.swift */,
+				BC9D776D27EB37AB008554EC /* SecondPresenter.swift */,
+				BC9D776B27EA6632008554EC /* SecondViewController.swift */,
 				BC9D776427EA582B008554EC /* First Module */,
 				BC9D775A27EA2E67008554EC /* UI Extensions */,
 				BC9D772E27E8CFF1008554EC /* Assets.xcassets */,
@@ -90,7 +99,7 @@
 		BC9D776127EA57F2008554EC /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				BC9D775F27EA4392008554EC /* Presenter.swift */,
+				BC9D775F27EA4392008554EC /* MainPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -192,14 +201,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC9D776E27EB37AB008554EC /* SecondPresenter.swift in Sources */,
 				BC9D775727EA24F0008554EC /* UIView+Ext.swift in Sources */,
 				BC9D775E27EA3E35008554EC /* GameViewData.swift in Sources */,
-				BC9D776027EA4392008554EC /* Presenter.swift in Sources */,
+				BC9D776027EA4392008554EC /* MainPresenter.swift in Sources */,
 				BC9D775C27EA3DE8008554EC /* Game.swift in Sources */,
 				BC9D775527EA1550008554EC /* MainViewController.swift in Sources */,
 				BC9D776627EA5B64008554EC /* User.swift in Sources */,
 				BC9D776827EA5BB3008554EC /* UserService.swift in Sources */,
 				BC9D772627E8CFEE008554EC /* AppDelegate.swift in Sources */,
+				BC9D777027EB3B7F008554EC /* UserViewData.swift in Sources */,
+				BC9D776C27EA6632008554EC /* SecondViewController.swift in Sources */,
 				BC9D772827E8CFEE008554EC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
