@@ -39,7 +39,8 @@ class MainViewController: UIViewController {
     }
     @objc func goToSecondView(sender: Any?) {
         let vc = SecondViewController()
-        present(vc, animated: true, completion: nil)
+        navigationController?.pushViewController(vc, animated: true)
+        //present(vc, animated: true, completion: nil) // no NC, go through directly
     }
 
     func configureUI() {

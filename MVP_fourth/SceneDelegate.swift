@@ -16,9 +16,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         // Add screen programmatically by create windowScene
         guard let windowScene = (scene as? UIWindowScene) else { return }
+        
+        // Add NavigationController
+        let navController = UINavigationController(rootViewController: MainViewController())
+        //navController.navigationBar.prefersLargeTitles = true
+        navController.navigationBar.tintColor = .black
+        
+        // If you don't need NC - just don't give a shit about mentioned above
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
-        window?.rootViewController = MainViewController()
+        window?.rootViewController = navController // or MainViewController()
         window?.makeKeyAndVisible()
     }
 

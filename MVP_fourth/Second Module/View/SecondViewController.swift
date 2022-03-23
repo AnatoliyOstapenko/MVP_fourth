@@ -13,13 +13,14 @@ class SecondViewController: UIViewController {
     
     let mvpTableView = UITableView()
     var array: [UserViewData] = []
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         tableViewConfigure()
         presenter.getUsers()
-
     }
+    
     func tableViewConfigure() {
         view.addSubview(mvpTableView)
         mvpTableView.frame = view.bounds
@@ -27,6 +28,7 @@ class SecondViewController: UIViewController {
         mvpTableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         mvpTableView.dataSource = self
     }
+    
     func customiseCell(cell: UITableViewCell) -> UITableViewCell {
         cell.backgroundColor = .cyan
         cell.textLabel?.textColor = .white
@@ -35,10 +37,8 @@ class SecondViewController: UIViewController {
         cell.detailTextLabel?.font = .systemFont(ofSize: 20, weight: .thin)
         return cell
     }
-
-
 }
-
+// MARK: - TableView DataSource
 extension SecondViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -55,6 +55,7 @@ extension SecondViewController: UITableViewDataSource {
     
     
 }
+// MARK: - Presenter Delegate
 extension SecondViewController: SecondPresenterView {
     func setUsers(users: [UserViewData]) {
         array = users
