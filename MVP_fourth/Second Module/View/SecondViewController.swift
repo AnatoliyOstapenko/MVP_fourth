@@ -16,16 +16,26 @@ class SecondViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        mvpTableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        mvpTableView.dataSource = self
-        
+        tableViewConfigure()
         presenter.getUsers()
 
     }
-    override func loadView() {
-        view = mvpTableView
+    func tableViewConfigure() {
+        view.addSubview(mvpTableView)
+        mvpTableView.frame = view.bounds
+        mvpTableView.backgroundColor = .cyan
+        mvpTableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        mvpTableView.dataSource = self
     }
+    func customiseCell(cell: UITableViewCell) -> UITableViewCell {
+        cell.backgroundColor = .cyan
+        cell.textLabel?.textColor = .white
+        cell.detailTextLabel?.textColor = .red
+        cell.textLabel?.font = .systemFont(ofSize: 26, weight: .bold)
+        cell.detailTextLabel?.font = .systemFont(ofSize: 20, weight: .thin)
+        return cell
+    }
+
 
 }
 
@@ -36,10 +46,11 @@ extension SecondViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = array[indexPath.row].name
-        cell.detailTextLabel?.text = array[indexPath.row].age
-        return cell
+        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "cell") // add subtitle
+        let customisedCell = customiseCell(cell: cell)
+        customisedCell.textLabel?.text = array[indexPath.row].name
+        customisedCell.detailTextLabel?.text = array[indexPath.row].age
+        return customisedCell
     }
     
     

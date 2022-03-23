@@ -27,7 +27,7 @@ class SecondPresenter {
                 self?.view?.setEmptyUsers()
             } else {
                 let mappedUsers = users.map {
-                    return UserViewData(name: "\($0.firstName) \($0.lastName)", age: "\($0.age)")
+                    return UserViewData(name: "\($0.firstName) \($0.lastName)", age: "\($0.age) years old")
                 }
                 self?.view?.setUsers(users: mappedUsers)
             }
