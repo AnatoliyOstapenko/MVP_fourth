@@ -8,7 +8,7 @@
 import Foundation
 
 protocol SecondPresenterView: AnyObject {
-    func setUsers(users: [UserViewData] )
+    func setUsers(users: [UserViewData])
 }
 
 class SecondPresenter {

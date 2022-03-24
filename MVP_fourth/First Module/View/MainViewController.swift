@@ -12,46 +12,31 @@ class MainViewController: UIViewController {
     let subView = UIView()
     let greatLabel = UILabel()
     
-    var button = UIButton()
+    var startGameButton = UIButton()
     var gameLabel = UILabel()
-    var secondViewButton = UIButton()
+    var nextScreenButton = UIButton()
    
     lazy var presenter = MainPresenter(with: self)
 
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .cyan
-        secondViewButton.isHidden = true
+        nextScreenButton.isHidden = true
 
         configureUI()
-        layout()
-    }
-    
-    func layout() {
-        button.addTarget(self, action: #selector(startGame(sender:)), for: .primaryActionTriggered)
-        secondViewButton.addTarget(self, action: #selector(goToSecondView(sender:)), for: .primaryActionTriggered)
-    }
-    
-    @objc func startGame(sender: Any?) {
-        presenter.startGame()
-        greatLabel.isHidden = true
-        secondViewButton.isHidden = false
-    }
-    @objc func goToSecondView(sender: Any?) {
-        let vc = SecondViewController()
-        navigationController?.pushViewController(vc, animated: true)
-        //present(vc, animated: true, completion: nil) // no NC, go through directly
+
     }
 
     func configureUI() {
         subViewConfigure()
         greatLabelConfigure()
-        buttonConfigure()
+        startGameButtonConfigure()
         gameLabelConfigure()
-        secondViewButtonConfigure()
+        nextScreenButtonConfigure()
     }
-    func secondViewButtonConfigure() {
-        secondViewButton.secondViewButtonConstraints(view: view, button: secondViewButton, subView: subView)
+    func nextScreenButtonConfigure() {
+        nextScreenButton.secondViewButtonConstraints(view: view, button: nextScreenButton, subView: subView)
+        nextScreenButton.addTarget(self, action: #selector(nextScreenButtonPressed(sender:)), for: .touchUpInside)
     }
     func subViewConfigure() {
         view.addSubview(subView)
@@ -61,15 +46,27 @@ class MainViewController: UIViewController {
     func greatLabelConfigure() {
         greatLabel.greatLabelConstraints(view: subView, label: greatLabel, subView: subView)
     }
-    func buttonConfigure() {
-        view.addSubview(button)
-        button.buttonConstraints(view: view, button: button)
+    func startGameButtonConfigure() {
+        view.addSubview(startGameButton)
+        startGameButton.buttonConstraints(view: view, button: startGameButton)
+        startGameButton.addTarget(self, action: #selector(startGameButtonPressed(sender:)), for: .touchUpInside)
     }
     func gameLabelConfigure() {
         view.addSubview(gameLabel)
-        gameLabel.gameLabelConstraints(view: view, button: button, label: gameLabel)
+        gameLabel.gameLabelConstraints(view: view, button: startGameButton, label: gameLabel)
     }
     
+    @objc func startGameButtonPressed(sender: Any?) {
+        presenter.startGame()
+        greatLabel.isHidden = true
+        nextScreenButton.isHidden = false
+    }
+    
+    @objc func nextScreenButtonPressed(sender: Any?) {
+        let vc = SecondViewController()
+        navigationController?.pushViewController(vc, animated: true)
+        //present(vc, animated: true, completion: nil) // no NC, go through directly
+    }
     
 }
 extension MainViewController: MainPresenterView {

@@ -13,7 +13,6 @@ class SecondViewController: UIViewController {
     
     let mvpTableView = UITableView()
     var array: [UserViewData] = []
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
